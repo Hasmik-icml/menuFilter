@@ -252,10 +252,10 @@ Menu
   border-radius: var(--radius);
   padding: 0.375rem 0.75rem;
   color: var(--clr-gold);
+  cursor: pointer;
   transition: var(--transition);
-  outline: none;
 }
-
+}
 @media screen and (min-width: 768px) {
   .menu-item {
     grid-template-columns: 225px 1fr;
