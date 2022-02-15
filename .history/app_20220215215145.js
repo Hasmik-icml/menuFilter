@@ -13,7 +13,6 @@ window.addEventListener("DOMContentLoaded", function () {
   displayMenuItems(menu);
   displayMenuButtons();
   filter();
-  filterByWord();
 });
 
 
@@ -53,7 +52,7 @@ function displayMenuButtons() {
 }
 
 
-function filter() {
+function filter(){
   const btn = document.querySelectorAll(".filter-btn");
   btn.forEach(item => {
     item.addEventListener("click", function () {
@@ -70,22 +69,14 @@ function filter() {
   })
 }
 
-function filterByWord() {
-
-  const input = document.querySelector(".filterByWord");
-  let searchText = "";
-  let id;
-  input.addEventListener("keyup", (e) => {
-
+function filterByWord(){
+  const inputText = document.querySelector(".filterByWord");
+  let searchText = ""
+  inputText.addEventListener("keyup", (e) =>{
     searchText = e.target.value;
-    let filteredMenuByWord = menu.filter(filterItem => {
-      return filterItem.category.indexOf(searchText) !== -1;
-    });
-    if (id !== undefined) {
-      clearTimeout(id);
-    }
-    id = setTimeout(() => {
-      displayMenuItems(filteredMenuByWord);
-    }, 500);
   })
+  menu.filter(filterItem => {
+    return filterItem.category === searchText;
+  });
+  displayMenuItems(searchText);
 }

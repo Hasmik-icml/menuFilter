@@ -74,18 +74,22 @@ function filterByWord() {
 
   const input = document.querySelector(".filterByWord");
   let searchText = "";
-  let id;
   input.addEventListener("keyup", (e) => {
 
     searchText = e.target.value;
     let filteredMenuByWord = menu.filter(filterItem => {
       return filterItem.category.indexOf(searchText) !== -1;
     });
-    if (id !== undefined) {
-      clearTimeout(id);
+    update();
+  })
+  let id;
+  function update(){
+    if (id !== undefined){
+      cle
     }
     id = setTimeout(() => {
       displayMenuItems(filteredMenuByWord);
-    }, 500);
-  })
+    }, 1000);
+  }
+
 }

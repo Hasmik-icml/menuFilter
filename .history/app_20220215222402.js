@@ -87,5 +87,8 @@ function filterByWord() {
     id = setTimeout(() => {
       displayMenuItems(filteredMenuByWord);
     }, 500);
+
   })
+
+
 }

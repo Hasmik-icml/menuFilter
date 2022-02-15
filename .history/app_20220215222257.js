@@ -81,11 +81,16 @@ function filterByWord() {
     let filteredMenuByWord = menu.filter(filterItem => {
       return filterItem.category.indexOf(searchText) !== -1;
     });
-    if (id !== undefined) {
+
+  })
+ 
+ 
+    if (id !== undefined){
       clearTimeout(id);
     }
     id = setTimeout(() => {
       displayMenuItems(filteredMenuByWord);
-    }, 500);
-  })
+    }, 1000);
+  
+
 }
