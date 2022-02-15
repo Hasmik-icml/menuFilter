@@ -12,7 +12,7 @@ const btnContainer = document.querySelector(".btn-container");
 window.addEventListener("DOMContentLoaded", function () {
   displayMenuItems(menu);
   displayMenuButtons();
-  filter();
+  filter
 });
 
 

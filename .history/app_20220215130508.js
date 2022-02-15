@@ -12,7 +12,6 @@ const btnContainer = document.querySelector(".btn-container");
 window.addEventListener("DOMContentLoaded", function () {
   displayMenuItems(menu);
   displayMenuButtons();
-  filter();
 });
 
 
@@ -46,15 +45,8 @@ function displayMenuButtons() {
     breakfast
   </button>
   <button type="button" class="filter-btn" data-id="lunch">lunch</button>
-  <button type="button" class="filter-btn" data-id="shakes">shakes</button>
-  <input type="text" name="filter" data-id="filterByWord" id="filterInput">`
-
-  
-
-}
-
-
-function filter(){
+  <button type="button" class="filter-btn" data-id="shakes">shakes
+  </button>`
   const btn = document.querySelectorAll(".filter-btn");
   btn.forEach(item => {
     item.addEventListener("click", function () {
@@ -69,4 +61,5 @@ function filter(){
       }
     })
   })
+
 }

@@ -12,7 +12,7 @@ const btnContainer = document.querySelector(".btn-container");
 window.addEventListener("DOMContentLoaded", function () {
   displayMenuItems(menu);
   displayMenuButtons();
-  filter();
+  
 });
 
 
@@ -54,19 +54,4 @@ function displayMenuButtons() {
 }
 
 
-function filter(){
-  const btn = document.querySelectorAll(".filter-btn");
-  btn.forEach(item => {
-    item.addEventListener("click", function () {
-      let filterItem = item.getAttribute("data-id");
-      if (filterItem !== "all") {
-        let filteredMenu = menu.filter(filterByName => {
-          return filterByName.category === filterItem;
-        })
-        displayMenuItems(filteredMenu);
-      } else {
-        displayMenuItems(menu);
-      }
-    })
-  })
-}
+function filter()
