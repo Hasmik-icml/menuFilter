@@ -75,12 +75,15 @@ function filterByWord() {
   const input = document.querySelector(".filterByWord");
   let searchText = "";
   let id;
+
   input.addEventListener("keyup", (e) => {
 
-    searchText = e.target.value;
+    searchText = e.target.value.toLowerCase();
+    
     let filteredMenuByWord = menu.filter(filterItem => {
-      return filterItem.category.indexOf(searchText) !== -1;
+      return filterItem.desc.toLowerCase().indexOf(searchText) !== -1;
     });
+
     if (id !== undefined) {
       clearTimeout(id);
     }
@@ -88,4 +91,8 @@ function filterByWord() {
       displayMenuItems(filteredMenuByWord);
     }, 500);
   })
+
 }
+
+
+

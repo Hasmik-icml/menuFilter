@@ -246,7 +246,7 @@ Menu
   background: transparent;
   border-color: var(--clr-gold);
   font-size: 1rem;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
   margin: 0 0.5rem;
   letter-spacing: 1px;
   border-radius: var(--radius);
